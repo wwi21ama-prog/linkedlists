@@ -54,4 +54,11 @@ public class Element {
     public int size() {
         return isValid() ? 1 + next.size() : 0;
     }
+
+    /**
+     * Liefert das ungültige Element am Ende der Liste.
+     */
+    public Element getEnd() {
+        return isValid() ? next.getEnd() : this;
+    }
 }

@@ -59,5 +59,19 @@ public class Main {
 
         // Die Länge der Liste ausgeben.
         System.out.println(e.size());
+
+        // Das Ende der Liste suchen und ausgeben.
+        // Das Ende ist ein ungültiges Element.
+        // Die Hilfsfunktion getEnd() liefert dieses Element und erleichtert
+        // so das Einfügen weiterer Elemente.
+        System.out.println(e.getEnd());
+
+        // Weitere Elemente anhängen, dieses Mal unter Verwendung von getEnd().
+        e.getEnd().setData(105, 67);
+        e.getEnd().setData(200, 367);
+        e.getEnd().setData(-2, 25);
+
+        // Die Länge erneut ausgeben, um zu sehen, dass sich etwas getan hat.
+        System.out.println(e.size());
     }
 }
