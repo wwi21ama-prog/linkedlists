@@ -100,5 +100,10 @@ public class Main {
         System.out.println(e.next); // (25,17)
         System.out.println(e.next.next); // (75,107)
         System.out.println(e.next.next.next); // (38, 55)
+
+        // Bequemere Methode: In einer Schleife alle Elemente ausgeben.
+        for (Element current  = e; current.isValid(); current = current.next) {
+            System.out.println(current);
+        }
     }
 }
