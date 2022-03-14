@@ -83,5 +83,45 @@ public class Element {
         }
         return result;
     }
-    
+
+    /* AUFGABEN */
+
+    /**
+     * Fügt ein Element mit den angegebenen Daten zwischen this und seinem
+     * Nachfolger ein. Diese Methode muss nur mit gültigen Elementen funktionieren.
+     * 
+     * (Bei ungültigen Elementen würde man das neue Element möglicherweise vor this
+     *  einfügen wollen. Wir haben aber an diese Stelle keine Informationen über den
+     *  Vorgänger zur Verfügung. Hierfür wäre eine doppelt verkettete Liste hilfreich.)
+     */
+    public void insert(int key, int value) {
+        // TODO
+
+        // Hinweis: Erzeugen Sie ein neues Element mit den angegebenen Daten.
+        //          Setzen Sie anschließend dessen Nachfolger passend und hängen
+        //          Sie es als Nachfolger von this in die Liste.
+    }
+
+    /**
+     * Liefert das i-te Element der Liste.
+     * Liefert null, falls dieses Element nicht existiert.
+     */
+    public Element get(int i) {
+        // TODO
+        return null;
+    }
+
+    /**
+     * Vertauscht die Elemente an den Stellen i und j.
+     * Hat keinen Effekt, wenn eine der Stellen nicht existiert.
+     * Garantiert Adressstabilität, d.h. es werden keine Werte kopiert,
+     * sondern nur die next-Zeiger der Listenelemente geändert.
+     */
+    public void swap(int i, int j) {
+        // TODO
+
+        // Hinweis: Holen Sie sich zuerst die beiden Elemente sowie deren
+        //          Vorgänger und Nachfolger. Anschließend können Sie die
+        //          Vertauschung einfach durchführen.
+    }
 }
