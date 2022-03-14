@@ -49,6 +49,13 @@ public class Main {
         System.out.println(e.next.next.next.next.next); // null
     }
 
+    /*
+     * Demo-Funktion 2:
+     * 
+     * Erzeugt eine Reihe von Elementen und ermittelt dann die Liste.
+     * Zeigt außerdem, wie man mittels einer Hilfsmethode getEnd() das Einfügen
+     * erleichtern und von der Länge unabhängig machen kann. 
+     */
     public static void demo2() {
         // Ein Element erzeugen und neue Elemente anhängen, wie in demo1().
         Element e = new Element();
