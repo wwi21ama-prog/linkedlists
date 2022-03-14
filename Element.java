@@ -47,4 +47,11 @@ public class Element {
         this.value = value;
         this.next = isValid() ? next : new Element();
     }
+
+    /**
+     * Liefert die Länge der Liste, die ab diesem Element beginnt.
+     */
+    public int size() {
+        return isValid() ? 1 + next.size() : 0;
+    }
 }
