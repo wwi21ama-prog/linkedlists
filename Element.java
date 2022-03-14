@@ -25,4 +25,14 @@ public class Element {
     public String toString() {
         return "(" + key + "," + value + ")";
     }
+
+    /**
+     * Prüft, ob dieses Element gültig ist.
+     * Ein Element ist gültig, wenn der Nachfolger nicht null ist.
+     * Dadurch können wir eine leere Liste erzeugen, indem wir einfach
+     * ein ungültiges Element konstruieren.
+     */
+    public boolean isValid() {
+        return next != null;
+    }
 }

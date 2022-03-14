@@ -6,5 +6,8 @@ public class Main {
 
         // Das Element ausgeben.
         System.out.println(e);
+
+        // Ausgeben, ob das Element gültig ist.
+        System.out.println(e.isValid());
     }
 }
