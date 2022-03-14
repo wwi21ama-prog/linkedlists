@@ -83,6 +83,13 @@ public class Main {
         System.out.println(e.size());
     }
 
+    /*
+     * Demo-Funktion 3:
+     * 
+     * Hängt Elemente nun mit der Methode add() an.
+     * Zeigt anschließend, wie man die Ausgabe simpler und flexibler als nur
+     * mit hartcodierten next.next...-Ketten machen kann.
+     */
     public static void demo3() {
         // Wieder ein Element erzeugen.
         Element e = new Element();
