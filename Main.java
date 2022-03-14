@@ -1,5 +1,22 @@
 public class Main {
+
+
     public static void main(String[] args) {
+        demo1();
+    }
+
+    /*
+     * Demo-Funktion 1:
+     * 
+     * Erzeugt eine Liste und hängt nach und nach Elemente an.
+     * Dies passiert nur mittels der Methode setData().
+     * 
+     * Dieses Beispiel soll die absolut grundlegenden Listenfunktionen zeigen.
+     * Eine Liste ist am Anfang leer, in diesem Fall besteht sie aus einem einzigen
+     * ungültigen Element. Neue Elemente werden angehängt, indem man am Ende neue Werte
+     * setzt und jeweils neue leere Elemente anhängt.
+     */
+    public static void demo1() {
         
         // Ein Element erzeugen.
         Element e = new Element();
