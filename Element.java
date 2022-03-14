@@ -68,4 +68,20 @@ public class Element {
     public void add(int key, int value) {
         getEnd().setData(key, value);
     }
+
+    /**
+     * Liefert einen String, der die String-Repräsentationen aller Elemente enthält.
+     * Die einzelnen Elemente sind mit Komma getrennt.
+     */
+    public String allElementsToString() {
+        if (!isValid()) {
+            return "";
+        }
+        String result = toString();
+        if (next.isValid()) {
+            result += "," + next.allElementsToString();
+        }
+        return result;
+    }
+    
 }

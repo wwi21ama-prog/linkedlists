@@ -105,5 +105,8 @@ public class Main {
         for (Element current  = e; current.isValid(); current = current.next) {
             System.out.println(current);
         }
+
+        // Oder mittels einer Methode der Klasse Element:
+        System.out.println(e.allElementsToString());
     }
 }
