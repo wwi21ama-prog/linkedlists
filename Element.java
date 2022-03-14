@@ -35,4 +35,16 @@ public class Element {
     public boolean isValid() {
         return next != null;
     }
+
+    /**
+     * Setzt die angegebenen Daten in diesem Element.
+     * Das Element muss dadurch gültig werden.
+     * Falls es bisher ungültig war, wird ein neues ungültiges Element angehängt.
+     * Ansonsten werden einfach die bisherigen Daten überschrieben.
+     */
+    public void setData(int key, int value) {
+        this.key = key;
+        this.value = value;
+        this.next = isValid() ? next : new Element();
+    }
 }
