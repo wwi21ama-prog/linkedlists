@@ -3,7 +3,8 @@ public class Main {
 
     public static void main(String[] args) {
         // demo1();
-        demo2();
+        // demo2();
+        demo3();
     }
 
     /*
@@ -80,5 +81,24 @@ public class Main {
 
         // Die Länge erneut ausgeben, um zu sehen, dass sich etwas getan hat.
         System.out.println(e.size());
+    }
+
+    public static void demo3() {
+        // Wieder ein Element erzeugen.
+        Element e = new Element();
+
+        // Elemente anhängen, dieses Mal mittels der neuen Methode add().
+        // Diese benutzt intern das Schema getEnd().setData() aus demo2().
+        e.add(42,15);
+        e.add(25,17);
+        e.add(75,107);
+        e.add(38,55);
+
+        // Die Liste und ihre Länge ausgeben.
+        System.out.println(e.size());
+        System.out.println(e); // (42,15)
+        System.out.println(e.next); // (25,17)
+        System.out.println(e.next.next); // (75,107)
+        System.out.println(e.next.next.next); // (38, 55)
     }
 }

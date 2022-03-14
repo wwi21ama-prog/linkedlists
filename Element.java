@@ -61,4 +61,11 @@ public class Element {
     public Element getEnd() {
         return isValid() ? next.getEnd() : this;
     }
+
+    /**
+     * Hängt ein neues Element mit den gegebenen Daten am Ende der Liste an.
+     */
+    public void add(int key, int value) {
+        getEnd().setData(key, value);
+    }
 }
