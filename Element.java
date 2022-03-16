@@ -45,7 +45,7 @@ public class Element {
     public void setData(int key, int value) {
         this.key = key;
         this.value = value;
-        this.next = isValid() ? next : new Element();
+        this.next = isValid() ? this.next : new Element();
     }
 
     /**
@@ -88,7 +88,7 @@ public class Element {
 
     /**
      * Fügt ein Element mit den angegebenen Daten zwischen this und seinem
-     * Nachfolger ein. Diese Methode muss nur mit gültigen Elementen funktionieren.
+     * Nachfolger ein. Diese Methode funktioniert nur mit gültigen Elementen.
      * 
      * (Bei ungültigen Elementen würde man das neue Element möglicherweise vor this
      *  einfügen wollen. Wir haben aber an diese Stelle keine Informationen über den
