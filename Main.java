@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         // demo1();
         // demo2();
-        demo3();
+        // demo3();
+        demo4();
     }
 
     /*
@@ -115,5 +116,23 @@ public class Main {
 
         // Oder mittels einer Methode der Klasse Element:
         System.out.println(e.allElementsToString());
+    }
+
+    public static void demo4() {
+        // Wieder ein Element erzeugen.
+        Element e = new Element();
+
+        // Elemente anhängen, dieses Mal mittels der neuen Methode add().
+        // Diese benutzt intern das Schema getEnd().setData() aus demo2().
+        e.add(42,15);
+        e.add(25,17);
+        e.add(75,107);
+        e.add(38,55);
+        
+        System.out.println(e.get(0));
+        System.out.println(e.get(2));
+        
+        System.out.println(e.get(4)); // Ungültig
+        System.out.println(e.get(-1)); // Ungültig
     }
 }

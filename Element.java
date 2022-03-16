@@ -1,3 +1,7 @@
+
+
+
+
 /**
  * Datentyp für Elemente einer verketteten Liste.
  */
@@ -107,8 +111,19 @@ public class Element {
      * Liefert null, falls dieses Element nicht existiert.
      */
     public Element get(int i) {
-        // TODO
-        return null;
+        // Behandlung ungültiger Eingaben.
+        if (i < 0) { return null; }
+
+        // Fall 1: Die Liste ist leer.
+        if (!this.isValid()) { return null; } 
+
+        // Fall 2: Die Liste ist ein gültiges Element und next ist eine Liste
+        if (i == 0) { return this; } // 2a: Es wurde nach Head gefragt, this ist Head.
+        return next.get(i-1);        // 2b: Es wurde nach einem Element in Tail gefragt.
+
+      /* Alternativ für Fall 2:
+        return i==0 ? this : next.get(i-1);
+       */
     }
 
     /**
