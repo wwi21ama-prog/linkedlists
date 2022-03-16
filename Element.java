@@ -92,18 +92,30 @@ public class Element {
 
     /**
      * Fügt ein Element mit den angegebenen Daten zwischen this und seinem
-     * Nachfolger ein. Diese Methode funktioniert nur mit gültigen Elementen.
+     * Nachfolger ein. Ist this ungültig, macht diese Methode nichts.
      * 
      * (Bei ungültigen Elementen würde man das neue Element möglicherweise vor this
      *  einfügen wollen. Wir haben aber an diese Stelle keine Informationen über den
      *  Vorgänger zur Verfügung. Hierfür wäre eine doppelt verkettete Liste hilfreich.)
      */
     public void insert(int key, int value) {
-        // TODO
+      // Fehlerüberprüfung:
+      if (!isValid()) {
+        return;
+      }
 
-        // Hinweis: Erzeugen Sie ein neues Element mit den angegebenen Daten.
-        //          Setzen Sie anschließend dessen Nachfolger passend und hängen
-        //          Sie es als Nachfolger von this in die Liste.
+      // Ein frisches Element mit den Daten erzeugen.
+      Element n = new Element();
+      n.key = key;
+      n.value = value;
+      
+      // Den Nachfolger von e festlegen.
+      n.next = this.next;
+      
+      // Dieses Element als Nachfolger von this festlegen.
+      this.next = n;
+
+      // Insgesamt wurde e zwischen this und this.next eingefügt.
     }
 
     /**
@@ -133,10 +145,23 @@ public class Element {
      * sondern nur die next-Zeiger der Listenelemente geändert.
      */
     public void swap(int i, int j) {
-        // TODO
+      // Ohne Fehlerüberprüfung.
+      // Annahme: i,j != 0
 
-        // Hinweis: Holen Sie sich zuerst die beiden Elemente sowie deren
-        //          Vorgänger und Nachfolger. Anschließend können Sie die
-        //          Vertauschung einfach durchführen.
+      /* Liste:
+      ... -> A -> B -> C -> ... -> D -> E -> F -> ...
+      */
+      Element B = get(i);
+      Element E = get(j);
+      
+      Element A = get(i-1);
+      Element C = B.next;
+      Element D = get(j-1);
+      Element F = E.next;
+
+      A.next = E;
+      B.next = F;
+      D.next = B;
+      E.next = C;
     }
 }

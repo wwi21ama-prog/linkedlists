@@ -5,7 +5,9 @@ public class Main {
         // demo1();
         // demo2();
         // demo3();
-        demo4();
+        //demo4();
+        //demo5();
+        demo6();
     }
 
     /*
@@ -134,5 +136,41 @@ public class Main {
         
         System.out.println(e.get(4)); // Ungültig
         System.out.println(e.get(-1)); // Ungültig
+    }
+  
+    public static void demo5() {
+        // Wieder ein Element erzeugen.
+        Element e = new Element();
+
+        e.add(42,15);
+        e.add(25,17);
+        e.add(75,107);
+        e.add(38,55);
+
+        e.insert(30000,30000);
+        
+        System.out.println(e.allElementsToString());
+    }
+
+  public static void demo6() {
+        // Wieder ein Element erzeugen.
+        Element e = new Element();
+
+        e.add(42,15);
+        e.add(25,17);
+        e.add(75,107);  // A
+        e.add(380000,55);   // B
+        e.add(100,55);  // C
+        e.add(200,55);
+        e.add(300,55);  // D
+        e.add(400000,55);  // E
+        e.add(500,55);  // F
+        e.add(600,55);
+
+        System.out.println(e.allElementsToString());
+        
+        e.swap(3,7);
+        
+        System.out.println(e.allElementsToString());
     }
 }
