@@ -5,9 +5,10 @@ public class Main {
         // demo1();
         // demo2();
         // demo3();
-        //demo4();
-        //demo5();
-        demo6();
+        // demo4();
+        // demo5();
+        // demo6();
+        demo7();
     }
 
     /*
@@ -172,5 +173,33 @@ public class Main {
         e.swap(3,7);
         
         System.out.println(e.allElementsToString());
+    
+        e.swap(0,7);
+    
+        System.out.println(e.allElementsToString());
     }
+
+
+  public static void demo7() {
+    // Eine Liste erzeugen.
+    List l1 = new List();
+
+    l1.add(42,15);
+    l1.add(25,17);
+    l1.add(75,107);
+    l1.add(380000,55);
+    l1.add(100,55);
+    l1.add(200,55);
+    l1.add(300,55);
+    l1.add(400000,55);
+    l1.add(500,55);
+    l1.add(600,55);
+  
+    System.out.println(l1.head.allElementsToString());
+    System.out.println(l1.size());
+
+    l1.swap(0,7);
+    System.out.println(l1.head.allElementsToString());
+  }
+
 }

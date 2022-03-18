@@ -141,12 +141,12 @@ public class Element {
     /**
      * Vertauscht die Elemente an den Stellen i und j.
      * Hat keinen Effekt, wenn eine der Stellen nicht existiert.
+     * Hat auch keinen Effekt, wenn i==0 oder j==0.
      * Garantiert Adressstabilität, d.h. es werden keine Werte kopiert,
      * sondern nur die next-Zeiger der Listenelemente geändert.
      */
     public void swap(int i, int j) {
-      // Ohne Fehlerüberprüfung.
-      // Annahme: i,j != 0
+      if (i == 0 || j == 0) { return; }
 
       /* Liste:
       ... -> A -> B -> C -> ... -> D -> E -> F -> ...
